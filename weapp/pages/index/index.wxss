@@ -1,0 +1,98 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 8px 14px 20px;
+}
+
+.top {
+  padding: 6px 4px 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #efece3;
+}
+
+.meta {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9fa79a;
+}
+
+.stage-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 18%, #2b3126 0%, #171a15 62%, #121410 100%);
+}
+
+.stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom {
+  padding-top: 14px;
+}
+
+.tabs {
+  display: flex;
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 9px;
+  color: #d8d5cc;
+}
+
+.tab.on {
+  background: #e5b53f;
+  color: #241d06;
+}
+
+.tab-hover {
+  opacity: 0.75;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.chip {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #d8d5cc;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.chip.on {
+  color: #241d06;
+  background: #e5b53f;
+}
+
+.chip-hover {
+  opacity: 0.7;
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 11px;
+  color: #8c9387;
+}

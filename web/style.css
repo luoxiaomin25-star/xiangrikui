@@ -1,0 +1,59 @@
+/* 独立页面样式（仅用于 index.html，不用于会话内嵌片段） */
+:root{
+  --ink:#efece3; --dim:#a9a49a; --line:rgba(255,255,255,.10);
+  --panel:rgba(24,26,22,.74); --accent:#e5b53f;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;overflow:hidden;color:var(--ink);
+  font:14px/1.5 -apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(120% 80% at 50% 8%,#31382a 0%,#1a1d18 58%,#111310 100%);
+}
+#stage{position:fixed;inset:0}
+
+#ui{
+  position:fixed;top:18px;right:18px;width:272px;max-height:calc(100vh - 36px);
+  overflow:auto;padding:16px 16px 14px;border:1px solid var(--line);border-radius:14px;
+  background:var(--panel);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 18px 48px rgba(0,0,0,.42);
+}
+#ui header{margin-bottom:14px}
+#ui h1{margin:0;font-size:15px;font-weight:500;letter-spacing:.02em}
+#ui h1 span{color:var(--dim);font-weight:400}
+.stats{margin:6px 0 0;font-size:11.5px;line-height:1.55;color:var(--dim)}
+.group{padding:11px 0;border-top:1px solid var(--line)}
+.label{display:block;margin-bottom:7px;font-size:11px;letter-spacing:.08em;color:var(--dim)}
+.seg{display:flex;gap:4px;padding:3px;border-radius:9px;background:rgba(255,255,255,.05)}
+.seg button{
+  flex:1;padding:6px 0;border:0;border-radius:6px;background:transparent;color:var(--ink);
+  font:inherit;font-size:12.5px;cursor:pointer;transition:background .15s;
+}
+.seg button:hover{background:rgba(255,255,255,.07)}
+.seg button.active{background:rgba(229,181,63,.86);color:#221c08}
+.check{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:13px;cursor:pointer}
+input[type=checkbox]{accent-color:var(--accent);width:15px;height:15px}
+.range{display:grid;grid-template-columns:1fr auto;gap:2px 8px;margin:9px 0 0;font-size:12.5px}
+.range output{color:var(--accent);font-variant-numeric:tabular-nums}
+.range input{grid-column:1/-1;width:100%;accent-color:var(--accent);margin:2px 0 0}
+.actions{display:flex;gap:8px;padding-top:12px;border-top:1px solid var(--line)}
+.actions button{
+  flex:1;padding:9px 0;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.05);
+  color:var(--ink);font:inherit;font-size:13px;cursor:pointer;transition:background .15s;
+}
+.actions button:hover{background:rgba(255,255,255,.1)}
+.actions button.primary{background:rgba(229,181,63,.88);border-color:transparent;color:#241d06}
+.actions button.primary:hover{background:#f0c451}
+.foot{margin:12px 0 0;font-size:11px;line-height:1.6;color:var(--dim)}
+#hint{
+  position:fixed;left:20px;bottom:18px;font-size:12px;color:var(--dim);
+  pointer-events:none;user-select:none;
+}
+body.clean #ui,body.clean #hint{display:none}
+
+@media (max-width:820px){
+  #ui{top:auto;left:12px;right:12px;bottom:12px;width:auto;max-height:52vh;padding:13px}
+  #hint{display:none}
+  .group{padding:9px 0}
+}
