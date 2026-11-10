@@ -1,0 +1,40 @@
+{
+  "description": "《向日葵和情绪向日葵》微信小游戏（情绪养成 + 三维模型欣赏）",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false,
+    "checkInvalidKey": true,
+    "uploadWithSourceMap": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "enhance": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "game",
+  "appid": "wx17676b750ff057c1",
+  "projectname": "向日葵和情绪向日葵",
+  "condition": {},
+  "simulatorPluginLibVersion": {},
+  "isGameTourist": false,
+  "editorSetting": {}
+}
